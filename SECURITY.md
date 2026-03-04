@@ -2,27 +2,35 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in this project, please report it responsibly.
+**Please do not report security vulnerabilities via public GitHub issues.**
 
-**Do NOT open a public GitHub issue for security vulnerabilities.**
+### Option 1: GitHub Private Vulnerability Reporting (Preferred)
 
-### Contact
+Use GitHub's built-in private reporting:
 
-- **Email:** security@l3digital.net
-- **Subject line:** [SECURITY] \<repo-name\> — Brief description
+1. Go to the **Security** tab of the affected repository
+2. Click **"Report a vulnerability"**
+3. Fill in the details
 
-### What to include
+This keeps the report private and within GitHub, and allows coordinated disclosure.
+
+### Option 2: Email
+
+- **Address:** security@l3digital.net
+- **Subject:** `[SECURITY] <repo-name> — Brief description`
+
+**What to include:**
 
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
 - Suggested fix (if any)
 
-### Response timeline
+### Response Timeline
 
-- **Acknowledgment:** Within 3 business days
-- **Assessment:** Within 1 week of acknowledgment
-- **Fix timeline:** Depends on severity, but we aim to address critical issues within 30 days
+- **Acknowledgement:** Within 48 hours
+- **Assessment:** Within 1 week
+- **Fix timeline:** Depends on severity — critical issues within 30 days where possible
 
 ## Supported Versions
 
