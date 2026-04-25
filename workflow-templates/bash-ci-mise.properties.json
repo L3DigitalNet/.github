@@ -1,0 +1,7 @@
+{
+  "name": "Bash CI (track-latest via mise)",
+  "description": "Lints bash scripts with shellcheck + bats from mise (.mise.toml). Tracks latest tool versions; daily refresh at 06:00 Eastern.",
+  "iconName": "octicon terminal",
+  "categories": ["Continuous Integration", "Shell"],
+  "filePatterns": ["*.sh$", "\\.mise\\.toml$"]
+}

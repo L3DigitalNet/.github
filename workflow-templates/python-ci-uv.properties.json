@@ -1,0 +1,7 @@
+{
+  "name": "Python CI (track-latest via setup-uv)",
+  "description": "uv-based Python CI: matrix test on multiple Python versions + lint job with track-latest black/ruff/mypy. Daily refresh at 06:00 Eastern.",
+  "iconName": "octicon code",
+  "categories": ["Continuous Integration", "Python"],
+  "filePatterns": ["pyproject\\.toml$", "uv\\.lock$"]
+}

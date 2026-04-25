@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+  schedule:
+    - cron: '0 6 * * *'
+      timezone: "America/New_York"
+  workflow_dispatch:
+
+jobs:
+  bash-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install CLI tools via mise (tracks latest)
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+        with:
+          cache: ${{ github.event_name != 'schedule' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Syntax check
+        run: |
+          for f in $(git ls-files '*.sh' '*.bash'); do
+            bash -n "$f"
+          done
+
+      - name: ShellCheck
+        run: |
+          shellcheck -S warning $(git ls-files '*.sh' '*.bash') || exit 1
